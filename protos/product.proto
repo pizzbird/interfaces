@@ -1,0 +1,55 @@
+syntax = "proto3";
+package pizzbird;
+
+import "timestamp.proto";
+
+message Topping {
+  string name = 1;
+  double price = 2;
+  string uuid = 3;
+  string src_image = 4;
+  Timestamp time = 5;
+}
+
+message ProductSize {
+  string name = 1;
+  double price = 2;
+  string uuid = 3;
+  Timestamp time = 4;
+  string srcImage = 5;
+}
+
+message Dough {
+  string name = 1;
+  string uuid = 2;
+  Timestamp time = 3;
+}
+
+message Ingredient {
+  string name = 1;
+  bool enabled = 2;
+  string uuid = 3;
+  string src_image = 4;
+  Timestamp time = 5;
+}
+
+message Board {
+  string name = 1;
+  string uuid = 2;
+  Timestamp time = 3;
+}
+
+message Product {
+  string uuid = 1;
+  string title = 2;
+  repeated ProductSize sizes = 3;
+  string categoryUuid = 4;
+  map<string, string> nutritional_value = 5;
+  Timestamp time = 6;
+  string url_image = 7;
+  repeated Ingredient ingredients = 8;
+  repeated Dough doughs = 9;
+  repeated Board boards = 10;
+  repeated Topping toppings = 11;
+  string description = 12;
+}

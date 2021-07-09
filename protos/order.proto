@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package pizzbird;
+
+import "product.proto";
+import "timestamp.proto";
+import "address.proto";
+
+enum OrderStatus {
+  ORDER_STATUS_UNSPECIFIED = 0;
+  ORDER_STATUS_CREATED = 1;
+  ORDER_STATUS_COOKING = 2;
+  ORDER_STATUS_COMPLETED = 3;
+  ORDER_STATUS_CANCELED = 4;
+}
+
+message Order {
+  repeated Product products = 1;
+  Address address = 2;
+  string uuid = 3;
+  OrderStatus status = 4;
+  Timestamp time = 5;
+}

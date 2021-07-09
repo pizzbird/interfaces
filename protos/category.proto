@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package pizzbird;
+import "timestamp.proto";
+
+message Category {
+  string title = 1;
+  string uuid = 2;
+  string url_image = 3;
+  Timestamp time = 4;
+}

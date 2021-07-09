@@ -1,0 +1,13 @@
+syntax = "proto3";
+package pizzbird;
+
+import "timestamp.proto";
+import "address.proto";
+import "product.proto";
+
+message Cart {
+  repeated Product products = 1;
+  Address address = 2;
+  string uuid = 3;
+  Timestamp time = 4;
+}

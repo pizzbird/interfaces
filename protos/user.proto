@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package pizzbird;
+
+import "address.proto";
+import "cart.proto";
+
+message User {
+  repeated Address addresses = 1;
+  Cart cart = 2;
+}

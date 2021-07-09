@@ -1,0 +1,15 @@
+syntax = "proto3";
+package pizzbird;
+
+import "address.proto";
+
+message Restaurant {
+  string title = 1;
+  Address address = 2;
+  repeated SocialMedia socialMedia = 3;
+  string description = 4;
+}
+
+message SocialMedia {
+  string url = 1;
+}
