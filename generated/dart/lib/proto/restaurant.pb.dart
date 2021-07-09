@@ -9,12 +9,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'address.pb.dart' as $1;
+import 'address.pb.dart' as $2;
 
 class Restaurant extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Restaurant', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pizzbird'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'title')
-    ..aOM<$1.Address>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $1.Address.create)
+    ..aOM<$2.Address>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $2.Address.create)
     ..pc<SocialMedia>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'socialMedia', $pb.PbFieldType.PM, protoName: 'socialMedia', subBuilder: SocialMedia.create)
     ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'description')
     ..hasRequiredFields = false
@@ -23,7 +23,7 @@ class Restaurant extends $pb.GeneratedMessage {
   Restaurant._() : super();
   factory Restaurant({
     $core.String? title,
-    $1.Address? address,
+    $2.Address? address,
     $core.Iterable<SocialMedia>? socialMedia,
     $core.String? description,
   }) {
@@ -73,15 +73,15 @@ class Restaurant extends $pb.GeneratedMessage {
   void clearTitle() => clearField(1);
 
   @$pb.TagNumber(2)
-  $1.Address get address => $_getN(1);
+  $2.Address get address => $_getN(1);
   @$pb.TagNumber(2)
-  set address($1.Address v) { setField(2, v); }
+  set address($2.Address v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasAddress() => $_has(1);
   @$pb.TagNumber(2)
   void clearAddress() => clearField(2);
   @$pb.TagNumber(2)
-  $1.Address ensureAddress() => $_ensure(1);
+  $2.Address ensureAddress() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.List<SocialMedia> get socialMedia => $_getList(2);

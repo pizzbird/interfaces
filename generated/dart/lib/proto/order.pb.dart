@@ -9,8 +9,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'product.pb.dart' as $2;
-import 'address.pb.dart' as $1;
+import 'product.pb.dart' as $1;
+import 'address.pb.dart' as $2;
 import 'timestamp.pb.dart' as $0;
 
 import 'order.pbenum.dart';
@@ -19,8 +19,8 @@ export 'order.pbenum.dart';
 
 class Order extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Order', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pizzbird'), createEmptyInstance: create)
-    ..pc<$2.Product>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'products', $pb.PbFieldType.PM, subBuilder: $2.Product.create)
-    ..aOM<$1.Address>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $1.Address.create)
+    ..pc<$1.Product>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'products', $pb.PbFieldType.PM, subBuilder: $1.Product.create)
+    ..aOM<$2.Address>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $2.Address.create)
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'uuid')
     ..e<OrderStatus>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: OrderStatus.ORDER_STATUS_UNSPECIFIED, valueOf: OrderStatus.valueOf, enumValues: OrderStatus.values)
     ..aOM<$0.Timestamp>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'time', subBuilder: $0.Timestamp.create)
@@ -29,8 +29,8 @@ class Order extends $pb.GeneratedMessage {
 
   Order._() : super();
   factory Order({
-    $core.Iterable<$2.Product>? products,
-    $1.Address? address,
+    $core.Iterable<$1.Product>? products,
+    $2.Address? address,
     $core.String? uuid,
     OrderStatus? status,
     $0.Timestamp? time,
@@ -75,18 +75,18 @@ class Order extends $pb.GeneratedMessage {
   static Order? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$2.Product> get products => $_getList(0);
+  $core.List<$1.Product> get products => $_getList(0);
 
   @$pb.TagNumber(2)
-  $1.Address get address => $_getN(1);
+  $2.Address get address => $_getN(1);
   @$pb.TagNumber(2)
-  set address($1.Address v) { setField(2, v); }
+  set address($2.Address v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasAddress() => $_has(1);
   @$pb.TagNumber(2)
   void clearAddress() => clearField(2);
   @$pb.TagNumber(2)
-  $1.Address ensureAddress() => $_ensure(1);
+  $2.Address ensureAddress() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.String get uuid => $_getSZ(2);

@@ -9,14 +9,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'product.pb.dart' as $2;
-import 'address.pb.dart' as $1;
+import 'product.pb.dart' as $1;
+import 'address.pb.dart' as $2;
 import 'timestamp.pb.dart' as $0;
 
 class Cart extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Cart', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pizzbird'), createEmptyInstance: create)
-    ..pc<$2.Product>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'products', $pb.PbFieldType.PM, subBuilder: $2.Product.create)
-    ..aOM<$1.Address>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $1.Address.create)
+    ..pc<$1.Product>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'products', $pb.PbFieldType.PM, subBuilder: $1.Product.create)
+    ..aOM<$2.Address>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'address', subBuilder: $2.Address.create)
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'uuid')
     ..aOM<$0.Timestamp>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'time', subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false
@@ -24,8 +24,8 @@ class Cart extends $pb.GeneratedMessage {
 
   Cart._() : super();
   factory Cart({
-    $core.Iterable<$2.Product>? products,
-    $1.Address? address,
+    $core.Iterable<$1.Product>? products,
+    $2.Address? address,
     $core.String? uuid,
     $0.Timestamp? time,
   }) {
@@ -66,18 +66,18 @@ class Cart extends $pb.GeneratedMessage {
   static Cart? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$2.Product> get products => $_getList(0);
+  $core.List<$1.Product> get products => $_getList(0);
 
   @$pb.TagNumber(2)
-  $1.Address get address => $_getN(1);
+  $2.Address get address => $_getN(1);
   @$pb.TagNumber(2)
-  set address($1.Address v) { setField(2, v); }
+  set address($2.Address v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasAddress() => $_has(1);
   @$pb.TagNumber(2)
   void clearAddress() => clearField(2);
   @$pb.TagNumber(2)
-  $1.Address ensureAddress() => $_ensure(1);
+  $2.Address ensureAddress() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.String get uuid => $_getSZ(2);

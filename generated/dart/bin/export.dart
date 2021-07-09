@@ -8,7 +8,10 @@ final dartFile = Glob("lib/proto/**.dart");
 void main() async {
   print(Directory.current);
   File file = File("lib/main.dart");
-  await file.writeAsString('');
+  await file.writeAsString("""///
+  //  Generated code. Do not modify.
+  //  source: bin/export.dart
+  //\n\n""");
   print('Main file cleaned');
 
   for (var entity in dartFile.listSync()) {
