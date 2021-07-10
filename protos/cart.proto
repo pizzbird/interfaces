@@ -4,7 +4,7 @@ package pizzbird;
 import "timestamp.proto";
 import "address.proto";
 import "product.proto";
-
+option go_package = "../proto";
 message Cart {
   repeated Product products = 1;
   Address address = 2;

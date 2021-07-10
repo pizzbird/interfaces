@@ -5,6 +5,7 @@ ifdef OS
 	SOURCES := ${shell powershell Get-ChildItem -Path protos/*.proto  -Name}
 else
 	DART_DIST := generated/dart/lib/proto
+	GO_OUT := generated/go/proto
 	SOURCES := ${shell find $(DIR) -name '*.proto'}
 endif
 
@@ -15,6 +16,14 @@ dart:
 	${SOURCES} \
 	--dart_out=$(DART_DIST)
 	cd generated/dart/ && dart run bin/export.dart
+
+go:
+	rm -rf generated/go/proto
+	mkdir generated/go/proto
+	protoc -I=$(DIR)/  \
+	${SOURCES} \
+	--go_out=$(GO_OUT)
+# cd generated/dart/ && dart run bin/export.dart
 
 dart-win:
 	powershell Remove-Item  ${DART_DIST}\* -Recurse -Force

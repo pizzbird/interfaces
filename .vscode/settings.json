@@ -3,6 +3,8 @@
         "pbenum",
         "pbjson",
         "pbserver",
-        "proto"
+        "prorobuf",
+        "proto",
+        "protobuf"
     ]
 }

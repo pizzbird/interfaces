@@ -2,7 +2,7 @@ syntax = "proto3";
 package pizzbird;
 
 import "timestamp.proto";
-
+option go_package = "../proto";
 message Address {
   double longitude = 1;
   double latitude = 2;

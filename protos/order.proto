@@ -5,6 +5,7 @@ package pizzbird;
 import "product.proto";
 import "timestamp.proto";
 import "address.proto";
+option go_package = "../proto";
 
 enum OrderStatus {
   ORDER_STATUS_UNSPECIFIED = 0;

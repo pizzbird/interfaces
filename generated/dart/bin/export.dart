@@ -6,7 +6,6 @@ import 'package:glob/list_local_fs.dart';
 final dartFile = Glob("lib/proto/**.dart");
 
 void main() async {
-  print(Directory.current);
   File file = File("lib/main.dart");
   await file.writeAsString("""///
   //  Generated code. Do not modify.
