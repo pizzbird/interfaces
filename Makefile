@@ -20,6 +20,6 @@ dart-win:
 	powershell Remove-Item  ${DART_DIST}\* -Recurse -Force
 	powershell mkdir ${DART_DIST} > nul
 	protoc -I $(DIR) \
-	$(SOURCES_WIN) \
+	$(SOURCES) \
 	--dart_out=$(DART_DIST)
 	cd generated\dart\ && dart run bin\export.dart
