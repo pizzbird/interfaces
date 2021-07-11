@@ -6,7 +6,7 @@ import 'package:glob/list_local_fs.dart';
 final dartFile = Glob("lib/proto/**.dart");
 
 void main() async {
-  File file = File("lib/main.dart");
+  File file = File("lib/pizzbird_interfaces.dart");
   await file.writeAsString("""///
   //  Generated code. Do not modify.
   //  source: bin/export.dart
@@ -22,5 +22,5 @@ void main() async {
       print('${entity.basename} recorded ');
     }
   }
-  print('Generate main.dart completed!');
+  print('Generate pizzbird_interfaces.dart completed!');
 }
