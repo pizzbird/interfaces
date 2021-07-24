@@ -43,7 +43,7 @@ message Product {
   string uuid = 1;
   string title = 2;
   repeated ProductSize sizes = 3;
-  string categoryUuid = 4;
+  string category_uuid = 4;
   map<string, string> nutritional_value = 5;
   Timestamp time = 6;
   string url_image = 7;
