@@ -1,4 +1,4 @@
-module github.com/pizzbird/interfaces
+module github.com/pizzbird/interfaces/go
 
 go 1.16
 
