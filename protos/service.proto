@@ -1,0 +1,12 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+import "product.proto";
+
+package pizzbird;
+// [START go_declaration]
+option go_package = "../rpc";
+// [END go_declaration]
+
+service PizzBird {
+  rpc getProduct(google.protobuf.Empty) returns (ProductResponse);
+}

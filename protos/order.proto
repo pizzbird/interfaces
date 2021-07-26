@@ -5,7 +5,7 @@ package pizzbird;
 import "product.proto";
 import "timestamp.proto";
 import "address.proto";
-option go_package = "../proto";
+option go_package = "../rpc";
 
 enum OrderStatus {
   ORDER_STATUS_UNSPECIFIED = 0;
@@ -16,7 +16,7 @@ enum OrderStatus {
 }
 
 message Order {
-  repeated Product products = 1;
+  repeated ProductResponse products = 1;
   Address address = 2;
   string uuid = 3;
   OrderStatus status = 4;

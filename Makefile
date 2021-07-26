@@ -18,12 +18,11 @@ dart:
 	cd generated/dart/ && dart run bin/export.dart
 
 go-lang:
-	rm -rf go/proto || true
-	mkdir go/proto
-	protoc -I=$(DIR)/  \
+	rm -rf go/rpc || true
+	mkdir go/rpc
+	protoc -I $(DIR)  \
 	${SOURCES} \
-	--go_out=$(GO_OUT)
-# cd generated/dart/ && dart run bin/export.dart
+	--go_out=plugins=grpc:$(GO_OUT) \
 
 dart-win:
 	powershell Remove-Item  ${DART_DIST}\* -Recurse -Force

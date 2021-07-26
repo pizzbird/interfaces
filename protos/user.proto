@@ -4,7 +4,7 @@ package pizzbird;
 
 import "address.proto";
 import "cart.proto";
-option go_package = "../proto";
+option go_package = "../rpc";
 message User {
   repeated Address addresses = 1;
   Cart cart = 2;

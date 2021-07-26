@@ -4,9 +4,9 @@ package pizzbird;
 import "timestamp.proto";
 import "address.proto";
 import "product.proto";
-option go_package = "../proto";
+option go_package = "../rpc";
 message Cart {
-  repeated Product products = 1;
+  repeated ProductResponse products = 1;
   Address address = 2;
   string uuid = 3;
   Timestamp time = 4;

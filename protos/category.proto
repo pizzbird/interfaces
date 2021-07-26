@@ -4,7 +4,7 @@ package pizzbird;
 import "timestamp.proto";
 
 // [START go_declaration]
-option go_package = "../proto";
+option go_package = "../rpc";
 // [END go_declaration]
 
 message Category {
