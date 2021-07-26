@@ -4,7 +4,7 @@ import "product.proto";
 
 package pizzbird;
 // [START go_declaration]
-option go_package = "../rpc";
+option go_package = "../pb";
 // [END go_declaration]
 
 service PizzBird {

@@ -1,4 +1,4 @@
-module github.com/pizzbird/interfaces/go
+module github.com/pizzbird/interfaces/go/rpc
 
 go 1.16
 

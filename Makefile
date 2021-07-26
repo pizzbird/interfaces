@@ -5,7 +5,7 @@ ifdef OS
 	SOURCES := ${shell powershell Get-ChildItem -Path protos/*.proto  -Name}
 else
 	DART_DIST := generated/dart/lib/proto
-	GO_OUT := go/proto
+	GO_OUT := go/pb
 	SOURCES := ${shell find $(DIR) -name '*.proto'}
 endif
 
@@ -18,8 +18,8 @@ dart:
 	cd generated/dart/ && dart run bin/export.dart
 
 go-lang:
-	rm -rf go/rpc || true
-	mkdir go/rpc
+	rm -rf go/pb || true
+	mkdir go/pb
 	protoc -I $(DIR)  \
 	${SOURCES} \
 	--go_out=plugins=grpc:$(GO_OUT) \

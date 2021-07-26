@@ -2,7 +2,7 @@ syntax = "proto3";
 package pizzbird;
 
 import "timestamp.proto";
-option go_package = "../rpc";
+option go_package = "../pb";
 message Topping {
   string name = 1;
   double price = 2;
